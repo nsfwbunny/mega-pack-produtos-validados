@@ -4,16 +4,25 @@
   <meta charset="UTF-8" />
   <title>Mega Pack Definitivo de Produtos Validados PLR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Fonte moderna -->
+  <meta name="description" content="Mega Pack definitivo de produtos digitais validados com direitos PLR: e-books, cursos, templates, funis e muito mais para você revender e lucrar.">
+  <meta name="keywords" content="PLR, produtos digitais, e-books, cursos online, templates, funis, automação, marketing digital">
+  <meta name="author" content="nsfwbunny">
+  <meta property="og:title" content="Mega Pack Definitivo de Produtos Validados PLR">
+  <meta property="og:description" content="Mega acervo de produtos digitais validados, prontos para revenda e lucro imediato.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/nsfwbunny/mega-pack-produtos-validados">
+  <meta property="og:image" content="URL_DA_IMAGEM_DESTAQUE_AQUI">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
-  <!-- Somente o engine do tsparticles v3 -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@3/tsparticles.engine.min.js"></script>
   <style>
+    html { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }
     body {
       margin: 0;
       min-height: 100vh;
       font-family: 'Open Sans', Arial, sans-serif;
       color: #fff;
+      background: #182437;
       overflow-x: hidden;
       position: relative;
     }
@@ -24,7 +33,7 @@
       top: 0; left: 0; z-index: 0;
       pointer-events: none;
     }
-    .container {
+    main.container {
       max-width: 900px;
       margin: 60px auto 40px auto;
       background: rgba(20,30,56,0.89);
@@ -33,7 +42,6 @@
       padding: 48px 24px 36px 24px;
       position: relative;
       z-index: 1;
-      box-sizing: border-box;
     }
     h1 {
       font-size: 2.5em;
@@ -72,7 +80,7 @@
       margin-top:38px;
       margin-bottom:18px;
     }
-    .section-title {
+    h2.section-title {
       font-size:1.35em;
       color:#8de5fe;
       margin-bottom:10px;
@@ -81,7 +89,7 @@
     }
     ul.benefits {
       color: #cffeec;
-      padding-left: 13px;
+      padding-left: 20px;
       margin: 0 0 16px 0;
       font-size: 1.08em;
       font-weight: 700;
@@ -115,21 +123,36 @@
       letter-spacing:0.6px;
     }
     @media (max-width:650px) {
-      .container {padding:10px 1%;}
+      main.container {padding:10px 1%;}
       h1 {font-size:1.3em;}
       .price {font-size:1.3em;}
+      .cta-btn {padding: 13px 20px; font-size: 1em;}
+      .guarantee {font-size: 1em;}
     }
+    @media (max-width:450px) {
+      h1 {font-size:1em;}
+      .subheadline {font-size:1em;}
+      .price {font-size:1em;}
+      .cta-btn {padding: 8px 14px; font-size: 0.93em;}
+      .box, .guarantee {padding: 10px 6px;}
+    }
+    a.cta-btn:focus, a.cta-btn:active {
+      outline: 3px solid #00ffd6;
+      outline-offset: 2px;
+    }
+    /* Para melhor leitura em dispositivos */
+    ::selection { background: #02ffd3; color: #171717; }
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
-  <div class="container">
+  <div id="particles-js" aria-hidden="true"></div>
+  <main class="container" role="main">
     <h1>🔥 Mega Pack Definitivo de Produtos Validados PLR 🔥</h1>
-    <div class="subheadline">
+    <p class="subheadline">
       Acesse o acervo mais PODEROSO e TECNOLÓGICO de produtos digitais já validados. Só os TOP resultados em uma única compra!
-    </div>
+    </p>
     <section>
-      <div class="section-title">O QUE VOCÊ RECEBE EM UM ÚNICO PACOTE</div>
+      <h2 class="section-title">O QUE VOCÊ RECEBE EM UM ÚNICO PACOTE</h2>
       <ul class="benefits">
         <li>+120 E-books Premium: desenvolvimento pessoal, saúde, negócios, relacionamentos, marketing e mais!</li>
         <li>+50 Cursos e vídeo-aulas completas: materiais ricos, certificados editáveis e apostilas</li>
@@ -138,7 +161,7 @@
       </ul>
     </section>
     <section>
-      <div class="section-title">DIFERENCIAIS ÚNICOS</div>
+      <h2 class="section-title">DIFERENCIAIS ÚNICOS</h2>
       <ul class="benefits">
         <li>Direitos PLR completos: personalize, revenda e lucre sem limites</li>
         <li>Produtos realmente testados e vendidos no campo</li>
@@ -147,25 +170,31 @@
         <li>Atualizações mensais GRÁTIS no grupo VIP</li>
       </ul>
     </section>
-    <div class="box depo">
-      "Comprei e vendi em 2 dias! Lucro instantâneo, material incrível." <br><b>— Rafael Gomes</b><br>
+    <div class="box depo" aria-label="Depoimento de Rafael Gomes">
+      <blockquote>
+        "Comprei e vendi em 2 dias! Lucro instantâneo, material incrível."
+        <br><b>— Rafael Gomes</b>
+      </blockquote>
     </div>
-    <div class="box depo">
-      "Produto campeão, não tem igual no Brasil. O suporte responde rápido e tudo pronto pra vender."<br><b>— Patrícia Lima</b>
+    <div class="box depo" aria-label="Depoimento de Patrícia Lima">
+      <blockquote>
+        "Produto campeão, não tem igual no Brasil. O suporte responde rápido e tudo pronto pra vender."
+        <br><b>— Patrícia Lima</b>
+      </blockquote>
     </div>
-    <div class="price">R$ 37,00</div>
-    <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener">QUERO TODOS OS PRODUTOS AGORA</a>
-    <div class="box bonus">
+    <div class="price" aria-label="Preço do pacote">R$ 37,00</div>
+    <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener" aria-label="Comprar agora o Mega Pack Produtos PLR">QUERO TODOS OS PRODUTOS AGORA</a>
+    <div class="box bonus" aria-label="Bônus especial">
       🎁 <b>Bônus:</b> As primeiras 100 compras recebem acesso vitalício ao grupo de dicas diárias de monetização + atualizações grátis!
     </div>
-    <div class="guarantee">
+    <div class="guarantee" aria-label="Garantia de 7 dias">
       🛡️ <span style="color:#00ffd6">Garantia incondicional de 7 dias:</span> Teste TUDO por 7 dias, se não gostar devolvo 100% do seu dinheiro. Risco zero pra você!
     </div>
     <div style="margin-top:26px;font-size:1.04em;">
       A hora de mudar de patamar é agora. <b>Pronto para vender, inovar e lucrar de verdade?</b><br>
       <em>Venha para o círculo dos empreendedores que usam tecnologia ao seu favor e comemoram resultados de verdade!</em>
     </div>
-  </div>
+  </main>
   <script>
     // Partículas animadas (nova sintaxe v3)
     (async () => {
