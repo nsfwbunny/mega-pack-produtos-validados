@@ -13,7 +13,7 @@
   <meta property="og:title" content="Mega Pack Definitivo de Produtos Validados PLR | Revenda e Lucre Agora" />
   <meta property="og:description" content="Mega acervo de produtos digitais validados PLR: e-books, cursos, templates e funis prontos para revenda. Lucro imediato com suporte VIP!" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://github.com/nsfwbunny/mega-pack-produtos-validados" />
+  <meta property="og:url" content="https://nsfwbunny.github.io/mega-pack-produtos-validados/" />
   <meta property="og:image" content="https://via.placeholder.com/1200x630/182437/00ffd6?text=Mega+Pack+PLR" />
   <meta property="og:site_name" content="Mega Pack PLR" />
   
@@ -36,7 +36,7 @@
       "priceCurrency": "BRL",
       "price": "37.00",
       "availability": "https://schema.org/InStock",
-      "url": "https://github.com/nsfwbunny/mega-pack-produtos-validados"
+      "url": "https://nsfwbunny.github.io/mega-pack-produtos-validados/"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -52,7 +52,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- tsParticles bundle v3 para efeito de partículas -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js" integrity="sha256-1v0z4Z0y5q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q" crossorigin="anonymous"></script>
 
   <style>
     /* Variáveis CSS para consistência e manutenção fácil */
@@ -435,8 +435,16 @@
 
     <!-- Bônus -->
     <section class="section">
-      <div class="bonus-card" aria-label="Bônus exclusivo para as primeiras compras">
-        <strong>Bônus Exclusivo:</strong> As primeiras 100 compras ganham acesso VITALÍCIO ao grupo VIP de monetização + atualizações grátis para sempre. Valor: R$ 197,00 – SEU DE GRAÇA!
+      <div class="bonus-card" aria-label="Bônus incluso no pacote">
+        <strong>Bônus Incluso no Mega Pack:</strong>
+        <ul style="margin:1rem 0 0 1.3rem; color:#fff; font-weight:600; list-style:inside;">
+          <li>Kit exclusivo de <b>Templates Profissionais</b> para banners, posts, logotipos e artes editáveis;</li>
+          <li><b>Funis de automação</b> prontos para Typebot e WhatsApp;</li>
+          <li><b>Guias extras de vendas, marketing digital e copywriting</b> para acelerar seus resultados;</li>
+          <li>Materiais de <b>Design Premium</b> para criar páginas impactantes;</li>
+          <li>Pacote “Comece Rápido”: arquivos organizados e prontos para baixar, revender ou oferecer como bônus próprios!</li>
+        </ul>
+        <div style="color:#0ea5e9; margin-top:10px; font-weight:500;">Tudo disponível para download imediato após a compra.</div>
       </div>
     </section>
 
@@ -479,55 +487,63 @@
   </main>
 
   <script>
-    // Inicialização otimizada das partículas com configuração aprimorada para performance
-    (async () => {
-      if (window.tsParticles) {
-        await tsParticles.load({
-          id: "particles-js",
-          options: {
-            fullScreen: { enable: false },
-            background: { color: { value: '#0f172a' } },
-            fpsLimit: 60,
-            particles: {
-              number: { value: 100, density: { enable: true, value_area: 800 } },
-              color: { value: ["#06b6d4", "#3b82f6", "#ffffff", "#10b981"] },
-              shape: { type: "circle" },
-              opacity: { value: 0.6, random: true, animation: { enable: true, speed: 1, opacity_min: 0.1 } },
-              size: { value: 3, random: true, animation: { enable: true, speed: 2 } },
-              move: {
-                enable: true,
-                speed: 2,
-                direction: "none",
-                random: true,
-                straight: false,
-                out_mode: "out",
-                trail: { enable: true, length: 10, fillColor: { value: "#06b6d4" } }
-              },
-              links: {
-                enable: true,
-                color: "#3b82f6",
-                opacity: 0.4,
-                width: 1,
-                distance: 120,
-                animation: { enable: true, speed: 1 }
-              },
-              interact: {
-                events: {
-                  onHover: { enable: true, mode: "repulse" },
-                  onClick: { enable: true, mode: "push" }
+    // Garantir que o DOM esteja carregado antes de inicializar tsParticles
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        if (window.tsParticles) {
+          console.log('tsParticles carregado com sucesso.');
+          await tsParticles.load({
+            id: 'particles-js',
+            options: {
+              fullScreen: { enable: false },
+              background: { color: { value: '#0f172a' } },
+              fpsLimit: 60,
+              particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: ['#06b6d4', '#3b82f6', '#ffffff', '#10b981'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.6, random: true, animation: { enable: true, speed: 1, opacity_min: 0.1 } },
+                size: { value: 3, random: true, animation: { enable: true, speed: 2 } },
+                move: {
+                  enable: true,
+                  speed: 2,
+                  direction: 'none',
+                  random: true,
+                  straight: false,
+                  out_mode: 'out',
+                  trail: { enable: true, length: 10, fillColor: { value: '#06b6d4' } }
                 },
-                modes: {
-                  repulse: { distance: 100, duration: 0.4 },
-                  push: { quantity: 4 }
+                links: {
+                  enable: true,
+                  color: '#3b82f6',
+                  opacity: 0.4,
+                  width: 1,
+                  distance: 120,
+                  animation: { enable: true, speed: 1 }
+                },
+                interact: {
+                  events: {
+                    onHover: { enable: true, mode: 'repulse' },
+                    onClick: { enable: true, mode: 'push' }
+                  },
+                  modes: {
+                    repulse: { distance: 100, duration: 0.4 },
+                    push: { quantity: 4 }
+                  }
                 }
-              }
-            },
-            detectRetina: true,
-            interactivity: { detect_on: "canvas" }
-          }
-        });
+              },
+              detectRetina: true,
+              interactivity: { detect_on: 'canvas' }
+            }
+          });
+          console.log('Partículas inicializadas com sucesso.');
+        } else {
+          console.error('tsParticles não foi carregado. Verifique o CDN ou conexão.');
+        }
+      } catch (error) {
+        console.error('Erro ao inicializar tsParticles:', error);
       }
-    })();
+    });
 
     // Animações on-scroll com Intersection Observer para performance
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
@@ -544,7 +560,7 @@
       observer.observe(el);
     });
 
-    // Smooth scroll para âncoras (já no CSS, mas reforço para compatibilidade)
+    // Smooth scroll para âncoras
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
