@@ -2,223 +2,555 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Mega Pack Definitivo de Produtos Validados PLR</title>
+  <title>Mega Pack Definitivo de Produtos Validados PLR | Revenda e Lucre Agora</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mega Pack definitivo de produtos digitais validados com direitos PLR: e-books, cursos, templates, funis e muito mais para você revender e lucrar.">
-  <meta name="keywords" content="PLR, produtos digitais, e-books, cursos online, templates, funis, automação, marketing digital">
-  <meta name="author" content="nsfwbunny">
-  <meta property="og:title" content="Mega Pack Definitivo de Produtos Validados PLR">
-  <meta property="og:description" content="Mega acervo de produtos digitais validados, prontos para revenda e lucro imediato.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/nsfwbunny/mega-pack-produtos-validados">
-  <meta property="og:image" content="URL_DA_IMAGEM_DESTAQUE_AQUI">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@3/tsparticles.engine.min.js"></script>
+  <meta name="description" content="Acesse o acervo definitivo de +120 e-books, +50 cursos, +200 templates e +25 funis PLR validados. Produtos prontos para revenda, com atualizações grátis e garantia de 7 dias. Transforme seu negócio digital hoje!" />
+  <meta name="keywords" content="PLR, produtos digitais, e-books PLR, cursos online PLR, templates PLR, funis de vendas, marketing digital, revenda digital" />
+  <meta name="author" content="nsfwbunny" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content="Mega Pack Definitivo de Produtos Validados PLR | Revenda e Lucre Agora" />
+  <meta property="og:description" content="Mega acervo de produtos digitais validados PLR: e-books, cursos, templates e funis prontos para revenda. Lucro imediato com suporte VIP!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/nsfwbunny/mega-pack-produtos-validados" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/182437/00ffd6?text=Mega+Pack+PLR" />
+  <meta property="og:site_name" content="Mega Pack PLR" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mega Pack Definitivo de Produtos Validados PLR" />
+  <meta name="twitter:description" content="Revenda produtos digitais validados e lucre sem limites!" />
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630/182437/00ffd6?text=Mega+Pack+PLR" />
+  
+  <!-- Structured Data JSON-LD para SEO (Schema.org Product) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mega Pack Definitivo de Produtos Validados PLR",
+    "description": "Pacote completo de produtos digitais com direitos PLR para revenda: e-books, cursos, templates e funis validados.",
+    "image": "https://via.placeholder.com/1200x630/182437/00ffd6?text=Mega+Pack+PLR",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "BRL",
+      "price": "37.00",
+      "availability": "https://schema.org/InStock",
+      "url": "https://github.com/nsfwbunny/mega-pack-produtos-validados"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    }
+  }
+  </script>
+
+  <!-- Fonts otimizadas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- tsParticles bundle v3 para efeito de partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+
   <style>
-    html { box-sizing: border-box; }
-    *, *:before, *:after { box-sizing: inherit; }
+    /* Variáveis CSS para consistência e manutenção fácil */
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: rgba(15, 23, 42, 0.85);
+      --bg-container: rgba(15, 23, 42, 0.9);
+      --text-primary: #ffffff;
+      --text-secondary: #94a3b8;
+      --text-accent: #0ea5e9;
+      --text-glow: #06b6d4;
+      --accent-primary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #ffffff 100%);
+      --accent-hover: linear-gradient(135deg, #0891b2 0%, #2563eb 50%, #f8fafc 100%);
+      --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.3);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
+      --border-radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-family: 'Inter', sans-serif;
+    }
+
+    /* Reset e base */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: 'Open Sans', Arial, sans-serif;
-      color: #fff;
-      background: #182437;
+      font-family: var(--font-family);
+      color: var(--text-primary);
+      background: var(--bg-primary);
       overflow-x: hidden;
-      position: relative;
+      line-height: 1.6;
+      font-size: 16px;
     }
+
+    /* Partículas de fundo - z-index baixo para não interferir */
     #particles-js {
       position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0; left: 0; z-index: 0;
+      inset: 0;
+      z-index: 0;
       pointer-events: none;
     }
-    main.container {
-      max-width: 900px;
-      margin: 60px auto 40px auto;
-      background: rgba(20,30,56,0.89);
-      border-radius: 28px;
-      box-shadow: 0 8px 48px 0 #00ffe080;
-      padding: 48px 24px 36px 24px;
+
+    /* Container principal - Grid para layout responsivo */
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
       position: relative;
       z-index: 1;
     }
+
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+      padding: 2rem 0;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      background: linear-gradient(135deg, var(--accent-primary));
+      border-radius: var(--border-radius);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--bg-primary);
+      box-shadow: var(--shadow-glow);
+      animation: pulse 2s infinite;
+    }
+
     h1 {
-      font-size: 2.5em;
-      background: linear-gradient(90deg, #38bcff, #02ffd3 70%, #fff 100%);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      background: var(--accent-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 0.35em;
+      background-clip: text;
+      margin: 0 0 1rem;
       font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .subheadline {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      color: var(--text-secondary);
+      margin: 0 0 2rem;
+      font-weight: 400;
+    }
+
+    /* CTA otimizado - Único e proeminente */
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent-primary);
+      color: var(--bg-primary);
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      box-shadow: var(--shadow-glow), 0 4px 0 rgba(6, 182, 212, 0.3);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border: none;
+      cursor: pointer;
       letter-spacing: 0.5px;
     }
-    .subheadline {
-      font-size: 1.28em;
-      color: #8df8f5;
-      margin-bottom: 30px;
-      font-weight: 600;
-      letter-spacing:0.7px;
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
     }
-    .cta-btn {
-      background: linear-gradient(90deg, #03ffd6, #38bcff 70%, #fff 100%);
-      border: none;
-      border-radius: 18px;
-      padding: 19px 50px;
-      font-size: 1.3em;
-      color: #171717;
-      font-weight: 900;
-      margin: 42px 0 16px 0;
-      box-shadow: 0 6px 0 #00eaaa, 0 12px 30px 0 #56fff1af;
-      letter-spacing: 1.4px;
-      cursor: pointer;
-      transition: transform .15s, box-shadow .13s;
-      text-decoration: none;
-      display: inline-block;
+
+    .cta-btn:hover::before { left: 100%; }
+    .cta-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
     }
-    .cta-btn:hover { transform: scale(1.04) translateY(-4px); box-shadow: 0 14px 26px #01cba5af, 0 8px 0 #02ffe0; }
-    section {
-      margin-top:38px;
-      margin-bottom:18px;
+
+    .cta-btn:focus {
+      outline: 2px solid var(--text-glow);
+      outline-offset: 2px;
     }
-    h2.section-title {
-      font-size:1.35em;
-      color:#8de5fe;
-      margin-bottom:10px;
-      margin-top:18px;
-      font-weight: 800;
+
+    /* Seções de conteúdo - Cards com grid */
+    .section {
+      margin: 3rem 0;
+      animation: fadeInUp 0.8s ease-out;
     }
-    ul.benefits {
-      color: #cffeec;
-      padding-left: 20px;
-      margin: 0 0 16px 0;
-      font-size: 1.08em;
+
+    .section h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--text-accent);
+      margin-bottom: 1.5rem;
       font-weight: 700;
+      text-align: center;
     }
-    .box {
-      background: rgba(25,25,60,0.55);
-      border-radius: 13px;
-      padding: 18px 14px;
-      margin: 22px 0px 0px 0px;
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
     }
-    .box.bonus { border-left: 4px solid #fa7ee9; color: #ffd8fd; }
-    .box.depo { border-left: 4px solid #00e9c0; color: #b5fff1; margin-bottom: 7px;}
+
+    .benefits-grid li {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      border-left: 4px solid var(--text-glow);
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: var(--transition);
+      box-shadow: var(--shadow-card);
+    }
+
+    .benefits-grid li:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .benefits-grid li::before {
+      content: '🚀';
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    /* Testimonials - Carrossel simples ou grid */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .testimonial-card {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      border-left: 4px solid #10b981;
+      font-style: italic;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover { transform: scale(1.02); }
+    .testimonial-card cite { font-style: normal; font-weight: 700; color: var(--text-accent); display: block; margin-top: 0.5rem; }
+
+    /* Preço e Oferta */
+    .pricing-section {
+      text-align: center;
+      background: var(--bg-secondary);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      margin: 2rem 0;
+      box-shadow: var(--shadow-glow);
+    }
+
     .price {
-      margin-top:18px; margin-bottom:10px;
-      font-size:2.1em;
-      color: #00ffd6;
-      font-weight: bold;
-      letter-spacing: 2px;
-      background: linear-gradient(90deg, #38bcff, #38ffe2 70%, #fff 100%);
+      font-size: clamp(2rem, 6vw, 4rem);
+      color: #10b981;
+      font-weight: 800;
+      margin: 0 0 1rem;
+      background: linear-gradient(135deg, #10b981, #34d399);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .guarantee {
-      margin-top:32px;
-      background: #083445c9;
-      padding: 18px 16px;
-      border-radius:12px;
-      font-size:1.14em;
-      border-left:5px solid #23ffc1;
-      font-weight:700;
-      letter-spacing:0.6px;
+
+    /* Bônus e Garantia - Destaques */
+    .bonus-card, .guarantee-card {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      margin: 1rem 0;
+      box-shadow: var(--shadow-card);
+      border-left: 4px solid #f59e0b;
     }
-    @media (max-width:650px) {
-      main.container {padding:10px 1%;}
-      h1 {font-size:1.3em;}
-      .price {font-size:1.3em;}
-      .cta-btn {padding: 13px 20px; font-size: 1em;}
-      .guarantee {font-size: 1em;}
+
+    .guarantee-card { border-left-color: #ef4444; }
+
+    .bonus-card::before, .guarantee-card::before {
+      content: '🎁';
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
     }
-    @media (max-width:450px) {
-      h1 {font-size:1em;}
-      .subheadline {font-size:1em;}
-      .price {font-size:1em;}
-      .cta-btn {padding: 8px 14px; font-size: 0.93em;}
-      .box, .guarantee {padding: 10px 6px;}
+
+    .guarantee-card::before { content: '🛡️'; }
+
+    /* FAQ - Expandível para abordar objeções */
+    .faq {
+      margin: 3rem 0;
     }
-    a.cta-btn:focus, a.cta-btn:active {
-      outline: 3px solid #00ffd6;
-      outline-offset: 2px;
+
+    .faq details {
+      background: var(--bg-secondary);
+      margin: 1rem 0;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
     }
-    /* Para melhor leitura em dispositivos */
-    ::selection { background: #02ffd3; color: #171717; }
+
+    .faq summary {
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text-accent);
+      list-style: none;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq details[open] summary { background: var(--text-glow); color: var(--bg-primary); }
+
+    .faq p { padding: 0 1rem 1rem; color: var(--text-secondary); }
+
+    /* Footer/Closing */
+    .closing {
+      text-align: center;
+      padding: 2rem;
+      background: var(--bg-secondary);
+      border-radius: var(--border-radius);
+      margin-top: 2rem;
+    }
+
+    /* Animações CSS */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Responsivo Mobile-First */
+    @media (max-width: 768px) {
+      .main-container { padding: 10px; }
+      .hero-section { gap: 1rem; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .testimonials { grid-template-columns: 1fr; }
+      .cta-btn { padding: 0.8rem 2rem; font-size: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 14px; }
+      .section { margin: 2rem 0; }
+    }
+
+    /* Seleção de texto */
+    ::selection {
+      background: var(--text-glow);
+      color: var(--bg-primary);
+    }
+
+    /* Scrollbar customizada para modernidade */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--text-glow);
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
+  <!-- Fundo de partículas -->
   <div id="particles-js" aria-hidden="true"></div>
-  <main class="container" role="main">
-    <h1>🔥 Mega Pack Definitivo de Produtos Validados PLR 🔥</h1>
-    <p class="subheadline">
-      Acesse o acervo mais PODEROSO e TECNOLÓGICO de produtos digitais já validados. Só os TOP resultados em uma única compra!
-    </p>
-    <section>
-      <h2 class="section-title">O QUE VOCÊ RECEBE EM UM ÚNICO PACOTE</h2>
-      <ul class="benefits">
-        <li>+120 E-books Premium: desenvolvimento pessoal, saúde, negócios, relacionamentos, marketing e mais!</li>
-        <li>+50 Cursos e vídeo-aulas completas: materiais ricos, certificados editáveis e apostilas</li>
-        <li>+200 Templates e designs: logotipos, banners, mockups, posts para redes sociais</li>
-        <li>+25 Funis, modelos de automação e scripts prontos (Typebot, WhatsApp, alta conversão)</li>
+
+  <main class="main-container" role="main">
+    <!-- Hero Section - Valor imediato -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Ilustração de produtos digitais PLR">📦</div>
+      <h1 id="hero-title">🔥 Mega Pack Definitivo de Produtos Validados PLR 🔥</h1>
+      <p class="subheadline">
+        O acervo mais poderoso e tecnológico de produtos digitais já validados. +370 itens prontos para revenda – só os TOP resultados em uma única compra!
+      </p>
+      <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Comprar Mega Pack PLR por R$ 37,00">QUERO REVENDER E LUCRAR AGORA</a>
+    </section>
+
+    <!-- O que você recebe -->
+    <section class="section" aria-labelledby="whats-included">
+      <h2 id="whats-included">O Que Você Recebe em Um Único Pacote Explosivo</h2>
+      <ul class="benefits-grid">
+        <li>+120 E-books Premium: Desenvolvimento pessoal, saúde, negócios, relacionamentos, marketing e nichos quentes!</li>
+        <li>+50 Cursos e Vídeo-Aulas Completas: Materiais ricos com certificados editáveis e apostilas profissionais.</li>
+        <li>+200 Templates e Designs: Logotipos, banners, mockups e posts otimizados para redes sociais.</li>
+        <li>+25 Funis e Modelos de Automação: Scripts prontos para Typebot, WhatsApp e alta conversão.</li>
       </ul>
     </section>
-    <section>
-      <h2 class="section-title">DIFERENCIAIS ÚNICOS</h2>
-      <ul class="benefits">
-        <li>Direitos PLR completos: personalize, revenda e lucre sem limites</li>
-        <li>Produtos realmente testados e vendidos no campo</li>
-        <li>Formatos diversos: PDF, MP4, PSD, HTML, DOCX e mais</li>
-        <li>Nichos validados: escolha seu foco!</li>
-        <li>Atualizações mensais GRÁTIS no grupo VIP</li>
+
+    <!-- Diferenciais -->
+    <section class="section" aria-labelledby="differentials">
+      <h2 id="differentials">Diferenciais que Fazem a Diferença no Seu Lucro</h2>
+      <ul class="benefits-grid">
+        <li>Direitos PLR Completos: Personalize, revenda ilimitado e crie sua marca sem restrições.</li>
+        <li>Produtos Testados no Mercado: Vendidos com sucesso – zero risco de flop.</li>
+        <li>Formatos Versáteis: PDF, MP4, PSD, HTML, DOCX e mais para qualquer plataforma.</li>
+        <li>Nichos Validados: Escolha e domine seu foco com dados reais de conversão.</li>
+        <li>Atualizações Mensais Grátis: Grupo VIP com dicas diárias e novos lançamentos.</li>
       </ul>
     </section>
-    <div class="box depo" aria-label="Depoimento de Rafael Gomes">
-      <blockquote>
-        "Comprei e vendi em 2 dias! Lucro instantâneo, material incrível."
-        <br><b>— Rafael Gomes</b>
+
+    <!-- Social Proof - Testimonials -->
+    <section class="section testimonials" aria-labelledby="testimonials">
+      <h2 id="testimonials" style="grid-column: 1 / -1; text-align: center;">O Que Nossos Clientes Dizem</h2>
+      <blockquote class="testimonial-card">
+        "Comprei e vendi em 2 dias! Lucro instantâneo com materiais de alta qualidade. Recomendo 100%!"
+        <cite>— Rafael Gomes, Empreendedor Digital</cite>
       </blockquote>
-    </div>
-    <div class="box depo" aria-label="Depoimento de Patrícia Lima">
-      <blockquote>
-        "Produto campeão, não tem igual no Brasil. O suporte responde rápido e tudo pronto pra vender."
-        <br><b>— Patrícia Lima</b>
+      <blockquote class="testimonial-card">
+        "O melhor pack PLR do Brasil. Suporte rápido e tudo pronto para escalar vendas. Mudou meu jogo!"
+        <cite>— Patrícia Lima, Marketeira</cite>
       </blockquote>
-    </div>
-    <div class="price" aria-label="Preço do pacote">R$ 37,00</div>
-    <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener" aria-label="Comprar agora o Mega Pack Produtos PLR">QUERO TODOS OS PRODUTOS AGORA</a>
-    <div class="box bonus" aria-label="Bônus especial">
-      🎁 <b>Bônus:</b> As primeiras 100 compras recebem acesso vitalício ao grupo de dicas diárias de monetização + atualizações grátis!
-    </div>
-    <div class="guarantee" aria-label="Garantia de 7 dias">
-      🛡️ <span style="color:#00ffd6">Garantia incondicional de 7 dias:</span> Teste TUDO por 7 dias, se não gostar devolvo 100% do seu dinheiro. Risco zero pra você!
-    </div>
-    <div style="margin-top:26px;font-size:1.04em;">
-      A hora de mudar de patamar é agora. <b>Pronto para vender, inovar e lucrar de verdade?</b><br>
-      <em>Venha para o círculo dos empreendedores que usam tecnologia ao seu favor e comemoram resultados de verdade!</em>
-    </div>
+    </section>
+
+    <!-- Preço e CTA Secundário -->
+    <section class="pricing-section" aria-labelledby="pricing">
+      <h2 id="pricing">Investimento Único para Lucro Vitalício</h2>
+      <div class="price" aria-label="Preço promocional">Apenas R$ 37,00</div>
+      <p style="margin: 1rem 0; color: var(--text-secondary);">Valor irrisório por +370 produtos validados – ROI imediato!</p>
+      <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Adquirir o pacote agora">GARANTA SEU PACOTE AGORA</a>
+    </section>
+
+    <!-- Bônus -->
+    <section class="section">
+      <div class="bonus-card" aria-label="Bônus exclusivo para as primeiras compras">
+        <strong>Bônus Exclusivo:</strong> As primeiras 100 compras ganham acesso VITALÍCIO ao grupo VIP de monetização + atualizações grátis para sempre. Valor: R$ 197,00 – SEU DE GRAÇA!
+      </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="section">
+      <div class="guarantee-card" aria-label="Garantia de satisfação">
+        <strong>Garantia Incondicional de 7 Dias:</strong> Teste tudo sem risco. Se não amar, devolvo 100% do seu investimento. Seu sucesso é nossa prioridade!
+      </div>
+    </section>
+
+    <!-- FAQ para Objeções -->
+    <section class="section faq" aria-labelledby="faq">
+      <h2 id="faq">Perguntas Frequentes – Tire Suas Dúvidas</h2>
+      <details>
+        <summary>Os produtos são realmente editáveis com PLR total?</summary>
+        <p>Sim! Todos os arquivos vêm com direitos PLR completos. Edite, renomeie e revenda como seu – sem royalties ou limitações.</p>
+      </details>
+      <details>
+        <summary>Como recebo os arquivos após a compra?</summary>
+        <p>Imediato! Link de download vitalício enviado por e-mail em segundos. Formato ZIP seguro e organizado por categoria.</p>
+      </details>
+      <details>
+        <summary>Funciona para iniciantes no marketing digital?</summary>
+        <p>Absolutamente! Incluímos guias passo a passo e suporte no grupo VIP para você começar a vender no dia 1.</p>
+      </details>
+      <details>
+        <summary>Qual o nicho ideal para esses produtos?</summary>
+        <p>Versátil para todos: saúde, finanças, relacionamentos, negócios. Escolha baseado no seu público – todos validados com dados de vendas reais.</p>
+      </details>
+    </section>
+
+    <!-- Closing Call to Action -->
+    <section class="closing" aria-label="Chamada final">
+      <h2>A Hora de Escalar Seu Negócio é Agora</h2>
+      <p style="color: var(--text-secondary); margin: 1rem 0;">
+        Junte-se aos empreendedores que usam tecnologia para lucrar de verdade. Não perca essa oportunidade única!
+      </p>
+      <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Finalizar compra">COMECE A REVENDER HOJE – R$ 37,00</a>
+    </section>
   </main>
+
   <script>
-    // Partículas animadas (nova sintaxe v3)
+    // Inicialização otimizada das partículas com configuração aprimorada para performance
     (async () => {
       if (window.tsParticles) {
         await tsParticles.load({
           id: "particles-js",
           options: {
             fullScreen: { enable: false },
-            background: { color: { value: '#182437' } },
+            background: { color: { value: '#0f172a' } },
             fpsLimit: 60,
             particles: {
-              number: { value: 80, density: { enable: true, value_area: 900 } },
-              color: { value: ["#00ffd6", "#38bcff", "#ffffff"] },
+              number: { value: 100, density: { enable: true, value_area: 800 } },
+              color: { value: ["#06b6d4", "#3b82f6", "#ffffff", "#10b981"] },
               shape: { type: "circle" },
-              opacity: { value: 0.75, random: true },
-              size: { value: 2, random: true },
-              move: { enable: true, speed: 1.6, direction: "none", out_mode: "out" },
-              links: { enable: true, color: "#38bcff", opacity: 0.35, width: 1.1, distance: 100 }
+              opacity: { value: 0.6, random: true, animation: { enable: true, speed: 1, opacity_min: 0.1 } },
+              size: { value: 3, random: true, animation: { enable: true, speed: 2 } },
+              move: {
+                enable: true,
+                speed: 2,
+                direction: "none",
+                random: true,
+                straight: false,
+                out_mode: "out",
+                trail: { enable: true, length: 10, fillColor: { value: "#06b6d4" } }
+              },
+              links: {
+                enable: true,
+                color: "#3b82f6",
+                opacity: 0.4,
+                width: 1,
+                distance: 120,
+                animation: { enable: true, speed: 1 }
+              },
+              interact: {
+                events: {
+                  onHover: { enable: true, mode: "repulse" },
+                  onClick: { enable: true, mode: "push" }
+                },
+                modes: {
+                  repulse: { distance: 100, duration: 0.4 },
+                  push: { quantity: 4 }
+                }
+              }
             },
             detectRetina: true,
+            interactivity: { detect_on: "canvas" }
           }
         });
       }
     })();
+
+    // Animações on-scroll com Intersection Observer para performance
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    // Smooth scroll para âncoras (já no CSS, mas reforço para compatibilidade)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   </script>
 </body>
 </html>
