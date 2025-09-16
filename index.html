@@ -51,8 +51,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- tsParticles bundle v3 para efeito de partículas -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js" integrity="sha256-1v0z4Z0y5q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q3q" crossorigin="anonymous"></script>
+  <!-- Particles.js v2.0.0 -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
   <style>
     /* Variáveis CSS para consistência e manutenção fácil */
@@ -110,7 +110,6 @@
       gap: 2rem;
       text-align: center;
       padding: 2rem 0;
-      animation: fadeInUp 1s ease-out;
     }
 
     .hero-image {
@@ -189,12 +188,11 @@
     }
 
     /* Seções de conteúdo - Cards com grid */
-    .section {
+    .section, .hero-section, .pricing-section, .testimonials, .closing {
       margin: 3rem 0;
-      animation: fadeInUp 0.8s ease-out;
     }
 
-    .section h2 {
+    .section h2, .pricing-section h2, .testimonials h2, .closing h2 {
       font-size: clamp(1.5rem, 4vw, 2rem);
       color: var(--text-accent);
       margin-bottom: 1.5rem;
@@ -328,7 +326,41 @@
       margin-top: 2rem;
     }
 
-    /* Animações CSS */
+    /* Animações de revelação para rolagem */
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal:nth-child(1) { transition-delay: 0.1s; }
+    .reveal:nth-child(2) { transition-delay: 0.2s; }
+    .reveal:nth-child(3) { transition-delay: 0.3s; }
+    .reveal:nth-child(4) { transition-delay: 0.4s; }
+    .reveal:nth-child(5) { transition-delay: 0.5s; }
+
+    .reveal.slide-left {
+      transform: translateX(-50px);
+    }
+
+    .reveal.slide-left.revealed {
+      transform: translateX(0);
+    }
+
+    .reveal.slide-right {
+      transform: translateX(50px);
+    }
+
+    .reveal.slide-right.revealed {
+      transform: translateX(0);
+    }
+
+    /* Animações CSS existentes */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -351,6 +383,7 @@
     @media (max-width: 480px) {
       body { font-size: 14px; }
       .section { margin: 2rem 0; }
+      .reveal { transform: translateY(20px); } /* Menor deslocamento em telas pequenas */
     }
 
     /* Seleção de texto */
@@ -380,191 +413,185 @@
 
   <main class="main-container" role="main">
     <!-- Hero Section - Valor imediato -->
-    <section class="hero-section" aria-labelledby="hero-title">
-      <div class="hero-image" role="img" aria-label="Ilustração de produtos digitais PLR">📦</div>
-      <h1 id="hero-title">🔥 Mega Pack Definitivo de Produtos Validados PLR 🔥</h1>
-      <p class="subheadline">
-        O acervo mais poderoso e tecnológico de produtos digitais já validados. +370 itens prontos para revenda – só os TOP resultados em uma única compra!
-      </p>
-      <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Comprar Mega Pack PLR por R$ 37,00">QUERO REVENDER E LUCRAR AGORA</a>
+    <section class="hero-section reveal" aria-labelledby="hero-title">
+      <div class="hero-image reveal" role="img" aria-label="Ilustração de produtos digitais PLR">📦</div>
+      <h1 id="hero-title" class="reveal">🔥 Mega Pack Definitivo de Produtos Validados PLR 🔥</h1>
+      <p class="subheadline reveal">O acervo mais poderoso e tecnológico de produtos digitais já validados. +370 itens prontos para revenda – só os TOP resultados em uma única compra!</p>
+      <a class="cta-btn reveal" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Comprar Mega Pack PLR por R$ 37,00">QUERO REVENDER E LUCRAR AGORA</a>
     </section>
 
     <!-- O que você recebe -->
-    <section class="section" aria-labelledby="whats-included">
-      <h2 id="whats-included">O Que Você Recebe em Um Único Pacote Explosivo</h2>
-      <ul class="benefits-grid">
-        <li>+120 E-books Premium: Desenvolvimento pessoal, saúde, negócios, relacionamentos, marketing e nichos quentes!</li>
-        <li>+50 Cursos e Vídeo-Aulas Completas: Materiais ricos com certificados editáveis e apostilas profissionais.</li>
-        <li>+200 Templates e Designs: Logotipos, banners, mockups e posts otimizados para redes sociais.</li>
-        <li>+25 Funis e Modelos de Automação: Scripts prontos para Typebot, WhatsApp e alta conversão.</li>
+    <section class="section reveal" aria-labelledby="whats-included">
+      <h2 id="whats-included" class="reveal">O Que Você Recebe em Um Único Pacote Explosivo</h2>
+      <ul class="benefits-grid reveal">
+        <li class="reveal slide-left">+120 E-books Premium: Desenvolvimento pessoal, saúde, negócios, relacionamentos, marketing e nichos quentes!</li>
+        <li class="reveal slide-right">+50 Cursos e Vídeo-Aulas Completas: Materiais ricos com certificados editáveis e apostilas profissionais.</li>
+        <li class="reveal slide-left">+200 Templates e Designs: Logotipos, banners, mockups e posts otimizados para redes sociais.</li>
+        <li class="reveal slide-right">+25 Funis e Modelos de Automação: Scripts prontos para Typebot, WhatsApp e alta conversão.</li>
       </ul>
     </section>
 
     <!-- Diferenciais -->
-    <section class="section" aria-labelledby="differentials">
-      <h2 id="differentials">Diferenciais que Fazem a Diferença no Seu Lucro</h2>
-      <ul class="benefits-grid">
-        <li>Direitos PLR Completos: Personalize, revenda ilimitado e crie sua marca sem restrições.</li>
-        <li>Produtos Testados no Mercado: Vendidos com sucesso – zero risco de flop.</li>
-        <li>Formatos Versáteis: PDF, MP4, PSD, HTML, DOCX e mais para qualquer plataforma.</li>
-        <li>Nichos Validados: Escolha e domine seu foco com dados reais de conversão.</li>
-        <li>Atualizações Mensais Grátis: Grupo VIP com dicas diárias e novos lançamentos.</li>
+    <section class="section reveal" aria-labelledby="differentials">
+      <h2 id="differentials" class="reveal">Diferenciais que Fazem a Diferença no Seu Lucro</h2>
+      <ul class="benefits-grid reveal">
+        <li class="reveal slide-left">Direitos PLR Completos: Personalize, revenda ilimitado e crie sua marca sem restrições.</li>
+        <li class="reveal slide-right">Produtos Testados no Mercado: Vendidos com sucesso – zero risco de flop.</li>
+        <li class="reveal slide-left">Formatos Versáteis: PDF, MP4, PSD, HTML, DOCX e mais para qualquer plataforma.</li>
+        <li class="reveal slide-right">Nichos Validados: Escolha e domine seu foco com dados reais de conversão.</li>
+        <li class="reveal slide-left">Atualizações Mensais Grátis: Grupo VIP com dicas diárias e novos lançamentos.</li>
       </ul>
     </section>
 
     <!-- Social Proof - Testimonials -->
-    <section class="section testimonials" aria-labelledby="testimonials">
-      <h2 id="testimonials" style="grid-column: 1 / -1; text-align: center;">O Que Nossos Clientes Dizem</h2>
-      <blockquote class="testimonial-card">
+    <section class="section testimonials reveal" aria-labelledby="testimonials">
+      <h2 id="testimonials" class="reveal" style="grid-column: 1 / -1; text-align: center;">O Que Nossos Clientes Dizem</h2>
+      <blockquote class="testimonial-card reveal slide-left">
         "Comprei e vendi em 2 dias! Lucro instantâneo com materiais de alta qualidade. Recomendo 100%!"
-        <cite>— Rafael Gomes, Empreendedor Digital</cite>
+        <cite class="reveal">— Rafael Gomes, Empreendedor Digital</cite>
       </blockquote>
-      <blockquote class="testimonial-card">
+      <blockquote class="testimonial-card reveal slide-right">
         "O melhor pack PLR do Brasil. Suporte rápido e tudo pronto para escalar vendas. Mudou meu jogo!"
-        <cite>— Patrícia Lima, Marketeira</cite>
+        <cite class="reveal">— Patrícia Lima, Marketeira</cite>
       </blockquote>
     </section>
 
     <!-- Preço e CTA Secundário -->
-    <section class="pricing-section" aria-labelledby="pricing">
-      <h2 id="pricing">Investimento Único para Lucro Vitalício</h2>
-      <div class="price" aria-label="Preço promocional">Apenas R$ 37,00</div>
-      <p style="margin: 1rem 0; color: var(--text-secondary);">Valor irrisório por +370 produtos validados – ROI imediato!</p>
-      <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Adquirir o pacote agora">GARANTA SEU PACOTE AGORA</a>
+    <section class="pricing-section reveal" aria-labelledby="pricing">
+      <h2 id="pricing" class="reveal">Investimento Único para Lucro Vitalício</h2>
+      <div class="price reveal" aria-label="Preço promocional">Apenas R$ 37,00</div>
+      <p class="reveal" style="margin: 1rem 0; color: var(--text-secondary);">Valor irrisório por +370 produtos validados – ROI imediato!</p>
+      <a class="cta-btn reveal" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Adquirir o pacote agora">GARANTA SEU PACOTE AGORA</a>
     </section>
 
     <!-- Bônus -->
-    <section class="section">
-      <div class="bonus-card" aria-label="Bônus incluso no pacote">
-        <strong>Bônus Incluso no Mega Pack:</strong>
-        <ul style="margin:1rem 0 0 1.3rem; color:#fff; font-weight:600; list-style:inside;">
-          <li>Kit exclusivo de <b>Templates Profissionais</b> para banners, posts, logotipos e artes editáveis;</li>
-          <li><b>Funis de automação</b> prontos para Typebot e WhatsApp;</li>
-          <li><b>Guias extras de vendas, marketing digital e copywriting</b> para acelerar seus resultados;</li>
-          <li>Materiais de <b>Design Premium</b> para criar páginas impactantes;</li>
-          <li>Pacote “Comece Rápido”: arquivos organizados e prontos para baixar, revender ou oferecer como bônus próprios!</li>
+    <section class="section reveal">
+      <div class="bonus-card reveal" aria-label="Bônus incluso no pacote">
+        <strong class="reveal">Bônus Exclusivo:</strong>
+        <ul style="margin:1rem 0 0 1.3rem; color:#fff; font-weight:600; list-style:inside;" class="reveal">
+          <li class="reveal slide-left">Acesso VITALÍCIO ao grupo VIP de monetização;</li>
+          <li class="reveal slide-right">Atualizações grátis para sempre (valor: R$ 197,00 – SEU DE GRAÇA!);</li>
+          <li class="reveal slide-left">Kit exclusivo de <b>Templates Profissionais</b> para banners, posts, logotipos e artes editáveis;</li>
+          <li class="reveal slide-right"><b>Funis de automação</b> prontos para Typebot e WhatsApp;</li>
+          <li class="reveal slide-left"><b>Guias extras de vendas, marketing digital e copywriting</b> para acelerar seus resultados;</li>
+          <li class="reveal slide-right">Materiais de <b>Design Premium</b> para criar páginas impactantes;</li>
+          <li class="reveal slide-left">Pacote “Comece Rápido”: arquivos organizados e prontos para baixar, revender ou oferecer como bônus próprios!</li>
         </ul>
-        <div style="color:#0ea5e9; margin-top:10px; font-weight:500;">Tudo disponível para download imediato após a compra.</div>
+        <div style="color:#0ea5e9; margin-top:10px; font-weight:500;" class="reveal">Tudo disponível para download imediato após a compra.</div>
       </div>
     </section>
 
     <!-- Garantia -->
-    <section class="section">
-      <div class="guarantee-card" aria-label="Garantia de satisfação">
-        <strong>Garantia Incondicional de 7 Dias:</strong> Teste tudo sem risco. Se não amar, devolvo 100% do seu investimento. Seu sucesso é nossa prioridade!
+    <section class="section reveal">
+      <div class="guarantee-card reveal" aria-label="Garantia de satisfação">
+        <strong class="reveal">Garantia Incondicional de 7 Dias:</strong> Teste tudo sem risco. Se não amar, devolvo 100% do seu investimento. Seu sucesso é nossa prioridade!
       </div>
     </section>
 
     <!-- FAQ para Objeções -->
-    <section class="section faq" aria-labelledby="faq">
-      <h2 id="faq">Perguntas Frequentes – Tire Suas Dúvidas</h2>
-      <details>
-        <summary>Os produtos são realmente editáveis com PLR total?</summary>
-        <p>Sim! Todos os arquivos vêm com direitos PLR completos. Edite, renomeie e revenda como seu – sem royalties ou limitações.</p>
+    <section class="section faq reveal" aria-labelledby="faq">
+      <h2 id="faq" class="reveal">Perguntas Frequentes – Tire Suas Dúvidas</h2>
+      <details class="reveal">
+        <summary class="reveal">Os produtos são realmente editáveis com PLR total?</summary>
+        <p class="reveal">Sim! Todos os arquivos vêm com direitos PLR completos. Edite, renomeie e revenda como seu – sem royalties ou limitações.</p>
       </details>
-      <details>
-        <summary>Como recebo os arquivos após a compra?</summary>
-        <p>Imediato! Link de download vitalício enviado por e-mail em segundos. Formato ZIP seguro e organizado por categoria.</p>
+      <details class="reveal">
+        <summary class="reveal">Como recebo os arquivos após a compra?</summary>
+        <p class="reveal">Imediato! Link de download vitalício enviado por e-mail em segundos. Formato ZIP seguro e organizado por categoria.</p>
       </details>
-      <details>
-        <summary>Funciona para iniciantes no marketing digital?</summary>
-        <p>Absolutamente! Incluímos guias passo a passo e suporte no grupo VIP para você começar a vender no dia 1.</p>
+      <details class="reveal">
+        <summary class="reveal">Funciona para iniciantes no marketing digital?</summary>
+        <p class="reveal">Absolutamente! Incluímos guias passo a passo e suporte no grupo VIP para você começar a vender no dia 1.</p>
       </details>
-      <details>
-        <summary>Qual o nicho ideal para esses produtos?</summary>
-        <p>Versátil para todos: saúde, finanças, relacionamentos, negócios. Escolha baseado no seu público – todos validados com dados de vendas reais.</p>
+      <details class="reveal">
+        <summary class="reveal">Qual o nicho ideal para esses produtos?</summary>
+        <p class="reveal">Versátil para todos: saúde, finanças, relacionamentos, negócios. Escolha baseado no seu público – todos validados com dados de vendas reais.</p>
       </details>
     </section>
 
     <!-- Closing Call to Action -->
-    <section class="closing" aria-label="Chamada final">
-      <h2>A Hora de Escalar Seu Negócio é Agora</h2>
-      <p style="color: var(--text-secondary); margin: 1rem 0;">
+    <section class="closing reveal" aria-label="Chamada final">
+      <h2 class="reveal">A Hora de Escalar Seu Negócio é Agora</h2>
+      <p style="color: var(--text-secondary); margin: 1rem 0;" class="reveal">
         Junte-se aos empreendedores que usam tecnologia para lucrar de verdade. Não perca essa oportunidade única!
       </p>
-      <a class="cta-btn" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Finalizar compra">COMECE A REVENDER HOJE – R$ 37,00</a>
+      <a class="cta-btn reveal" href="https://pay.cakto.com.br/stoqdac_570471" target="_blank" rel="noopener noreferrer" aria-label="Finalizar compra">COMECE A REVENDER HOJE – R$ 37,00</a>
     </section>
   </main>
 
   <script>
-    // Garantir que o DOM esteja carregado antes de inicializar tsParticles
-    document.addEventListener('DOMContentLoaded', async () => {
+    // Inicialização do Particles.js v2.0.0
+    document.addEventListener('DOMContentLoaded', () => {
       try {
-        if (window.tsParticles) {
-          console.log('tsParticles carregado com sucesso.');
-          await tsParticles.load({
-            id: 'particles-js',
-            options: {
-              fullScreen: { enable: false },
-              background: { color: { value: '#0f172a' } },
-              fpsLimit: 60,
-              particles: {
-                number: { value: 100, density: { enable: true, value_area: 800 } },
-                color: { value: ['#06b6d4', '#3b82f6', '#ffffff', '#10b981'] },
-                shape: { type: 'circle' },
-                opacity: { value: 0.6, random: true, animation: { enable: true, speed: 1, opacity_min: 0.1 } },
-                size: { value: 3, random: true, animation: { enable: true, speed: 2 } },
-                move: {
-                  enable: true,
-                  speed: 2,
-                  direction: 'none',
-                  random: true,
-                  straight: false,
-                  out_mode: 'out',
-                  trail: { enable: true, length: 10, fillColor: { value: '#06b6d4' } }
-                },
-                links: {
-                  enable: true,
-                  color: '#3b82f6',
-                  opacity: 0.4,
-                  width: 1,
-                  distance: 120,
-                  animation: { enable: true, speed: 1 }
-                },
-                interact: {
-                  events: {
-                    onHover: { enable: true, mode: 'repulse' },
-                    onClick: { enable: true, mode: 'push' }
-                  },
-                  modes: {
-                    repulse: { distance: 100, duration: 0.4 },
-                    push: { quantity: 4 }
-                  }
-                }
+        if (window.particlesJS) {
+          console.log('Particles.js v2.0.0 carregado com sucesso.');
+          particlesJS('particles-js', {
+            particles: {
+              number: { value: 100, density: { enable: true, value_area: 800 } },
+              color: { value: ['#06b6d4', '#3b82f6', '#ffffff', '#10b981'] },
+              shape: { type: 'circle', stroke: { width: 0, color: '#000000' } },
+              opacity: { value: 0.6, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+              size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.1, sync: false } },
+              line_linked: {
+                enable: true,
+                distance: 120,
+                color: '#3b82f6',
+                opacity: 0.4,
+                width: 1
               },
-              detectRetina: true,
-              interactivity: { detect_on: 'canvas' }
-            }
+              move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: true,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
+              }
+            },
+            interactivity: {
+              detect_on: 'canvas',
+              events: {
+                onhover: { enable: true, mode: 'repulse' },
+                onclick: { enable: true, mode: 'push' },
+                resize: true
+              },
+              modes: {
+                repulse: { distance: 100, duration: 0.4 },
+                push: { particles_nb: 4 }
+              }
+            },
+            retina_detect: true
           });
           console.log('Partículas inicializadas com sucesso.');
         } else {
-          console.error('tsParticles não foi carregado. Verifique o CDN ou conexão.');
+          console.error('Particles.js não foi carregado. Verifique o CDN ou conexão.');
         }
       } catch (error) {
-        console.error('Erro ao inicializar tsParticles:', error);
+        console.error('Erro ao inicializar Particles.js:', error);
       }
-    });
 
-    // Animações on-scroll com Intersection Observer para performance
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-        }
+      // Intersection Observer para animações de revelação
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target); // Para animação única
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
       });
-    }, observerOptions);
 
-    document.querySelectorAll('.section').forEach(el => {
-      el.style.animationPlayState = 'paused';
-      observer.observe(el);
-    });
-
-    // Smooth scroll para âncoras
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      // Smooth scroll para âncoras
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
       });
     });
   </script>
